@@ -63,7 +63,7 @@ header {
 
 /* Estilos base para cada botón de opción del header */
 .options {
-    font-size: clamp(13px, 2vw, 15px);
+     font-size: clamp(13px, 1vw, 10px);
     background-color: #fcc57e;
     color: rgb(0, 0, 0);
     border: none;
@@ -357,4 +357,5 @@ header {
         width: 80px;
         height: 80px;
     }
+
 }
