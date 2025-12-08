@@ -1,0 +1,301 @@
+/* Estilos CSS */
+
+/* Reset universal: elimina márgenes y padding por defecto de todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor centrado: ancho responsivo con máximo de 1200px, centrado horizontalmente */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Body: estilos generales del cuerpo de la página, fuente, color de fondo, espaciado superior para header fijo */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 100px;
+    background-size: cover;
+    background-color: #6e6e6e;
+
+    /* Header fijo: barra de navegación que permanece arriba al hacer scroll */
+    header {
+        background-color: #fcc57e;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgb(167, 124, 67);
+        z-index: 1000;
+    }
+
+
+    /* Encabezado del sitio: logo/título con espaciado y alineación */
+    .row_header {
+        display: flex;
+        gap: 12px;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+
+    /* Botones de navegación alineados a la derecha del header */
+    .options_buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-right: 20px;
+    }
+
+    /* Estilos base para cada botón de opción del header: sin bordes, color base */
+    .options {
+        font-size: clamp(13px, 2vw, 15px);
+        background-color: #fcc57e;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    /* Bloque hero principal: sección con imagen de fondo, proporciones 16:9 */
+    .one_block {
+        aspect-ratio: 16 / 9;
+        background-image: url("../assets/images/background.png");
+        background-size: cover;
+        background-position: center;
+        border: none;
+        padding: 10px;
+    }
+
+    /* Contenedor del título principal en bloque hero: flexbox con espaciado y fuente grande */
+    .row_content {
+        display: flex;
+        gap: 120px;
+        font-size: clamp(28px, 6vw, 80px);
+        margin-top: 120px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+
+    /* Texto descriptivo en bloque hero: flexbox con fuente responsiva */
+    .row_text {
+        display: flex;
+        gap: 12px;
+        font-size: clamp(14px, 2.2vw, 24px);
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 150px;
+        color: rgb(253, 253, 253);
+    }
+
+    /* Botón de acción principal (COMPRAR): con color distintivo y cursor pointer */
+    .seletion {
+        background-color: #d6f8f4;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: clamp(14px, 2.5vw, 24px);
+        margin-top: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    /* Bloque informativo: sección con fondo claro para descripción de producto */
+    .two_block {
+        background-color: #fffefe;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px;
+    }
+
+    /* Título y descripción de sección: centrado con fuente responsiva */
+    .row_Title {
+        font-size: 50px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: rgb(0, 0, 0);
+        font-size: clamp(14px, 2.2vw, 24px);
+    }
+
+    /* Bloque de galería de productos: proporciones 16:9 con color de fondo distintivo */
+    .three_block {
+        /* aspect-ratio: 16 / 9; */
+        background-color: #d6f8f4;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px;
+    }
+
+    /* Grid de 3 columnas para mostrar las tarjetas de productos lado a lado, responsivo */
+    .menu {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Título de la sección de productos: ocupa toda la fila superior del grid */
+    .menu-title {
+        grid-column: 1 / -1;
+        text-align: center;
+        background: transparent;
+        padding: 16px 0 8px 0;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    /* Tarjeta individual de producto: flexbox columna con imagen, texto y botón */
+    .card {
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(14px, 2.2vw, 24px);
+        box-shadow: 0 2px 4px rgb(156, 214, 216);
+    }
+
+    /* Imagen del producto: tamaño fijo, contenida sin deformarse */
+    .card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    /* Botón de compra dentro de la tarjeta: con color y espaciado */
+    .card button {
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: #f7d897;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    /* Media query: en pantallas medianas (900px), el grid pasa a 2 columnas */
+    @media (max-width: 900px) {
+        .menu {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Media query: en pantallas pequeñas (600px), el grid pasa a 1 columna */
+    @media (max-width: 600px) {
+        .menu {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Bloque con reglas del juego: fondo con patrón y estilos */
+    .four_block {
+        background-color: #fffefe;
+        background-image: url("../assets/images/bg-grid.png");
+        background-size: cover;
+        background-position: center;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px;
+    }
+
+    /* Contenedor flex principal: organiza texto (izquierda) e imagen (derecha) lado a lado */
+    .rules_container {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    /* Contenedor de texto: flexbox columna para apilar h1 y p verticalmente */
+    .card_rules {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: clamp(14px, 2.2vw, 24px);
+        color: rgb(0, 0, 0);
+        flex: 1;
+    }
+
+    /* Título de reglas: fuente responsiva sin margen */
+    .card_rules h1 {
+        font-size: clamp(24px, 3vw, 36px);
+        margin: 0;
+    }
+
+    /* Párrafo de reglas: sin margen con altura de línea aumentada para legibilidad */
+    .card_rules p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* Contenedor de imagen: flexbox para centrarla */
+    .rules_img {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Imagen de reglas: tamaño cuadrado con bordes redondeados y sombra */
+    .rules_img .img_rule {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Media query: en pantallas pequeñas (<768px), apila texto e imagen verticalmente */
+    @media (max-width: 768px) {
+        .rules_container {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .rules_img .img_rule {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .row_footer {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        background-color: #bebebe;
+        color: rgb(0, 0, 0);
+        box-shadow: 0 -2px 4px rgb(255, 255, 255);
+
+    }
+    .row_footer button {
+        background: transparent;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .row_footer hr {
+        width: 1px;
+        height: 20px;
+        background-color: rgb(252, 251, 251);
+        border: none;
+        margin: 0 5px;
+    }
+}
