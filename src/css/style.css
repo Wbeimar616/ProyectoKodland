@@ -1,11 +1,9 @@
-/* Estilos CSS */
 
 /* Reset universal: elimina márgenes y padding por defecto de todos los elementos */
 html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +18,7 @@ html, body {
     padding: 0 15px;
 }
 
-/* Body: estilos generales del cuerpo de la página */
+/* estilos generales del cuerpo de la página */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 100px;
@@ -28,7 +26,7 @@ body {
     background-color: #ffffff;
 }
 
-/* Header fijo: barra de navegación que permanece arriba al hacer scroll */
+/* estilos de el encabezado fijado arriba */
 header {
     background-color: #fcc57e;
     color: rgb(0, 0, 0);
@@ -43,7 +41,7 @@ header {
     z-index: 1000;
 }
 
-/* Encabezado del sitio: logo/título con espaciado y alineación */
+/*  espaciado y alineación del encabezado */
 .row_header {
     display: flex;
     gap: 12px;
@@ -52,7 +50,6 @@ header {
     margin-bottom: 35px;
 }
 
-/* Botones de navegación alineados a la derecha del header */
 .options_buttons {
     display: flex;
     justify-content: flex-end;
@@ -61,9 +58,9 @@ header {
     flex-wrap: wrap;
 }
 
-/* Estilos base para cada botón de opción del header */
+/* Estilos para los botones del encabezado */
 .options {
-    font-size: clamp(13px, 2vw, 15px);
+    font-size: clamp(13px, 1vw, 10px);
     background-color: #fcc57e;
     color: rgb(0, 0, 0);
     border: none;
@@ -72,7 +69,7 @@ header {
     transition: all 0.2s ease;
 }
 
-/* Bloque principal: sección con imagen de fondo*/
+/* estilos del primer bloque*/
 .one_block {
     aspect-ratio: 14 / 9;
     background-image: url("../assets/images/background.png");
@@ -83,7 +80,6 @@ header {
     width: 100%;
 }
 
-/* Contenedor del título principal en bloque principal */
 .row_content {
     display: flex;
     gap: 120px;
@@ -94,7 +90,6 @@ header {
     flex-wrap: wrap;
 }
 
-/* Texto descriptivo en bloque principal */
 .row_text {
     display: flex;
     gap: 12px;
@@ -106,7 +101,6 @@ header {
     flex-wrap: wrap;
 }
 
-/* Botón de acción principal (COMPRAR) */
 .seletion {
     background-color: #d6f8f4;
     color: rgb(0, 0, 0);
@@ -120,7 +114,7 @@ header {
     cursor: pointer;
 }
 
-/* Bloque informativo */
+/* estilos del segundo bloque */
 .two_block {
     background-color: #fffefe;
     color: rgb(0, 0, 0);
@@ -129,7 +123,6 @@ header {
     width: 100%;
 }
 
-/* Título y descripción de sección */
 .row_Title {
     text-align: center;
     margin-top: 50px;
@@ -137,8 +130,7 @@ header {
     color: rgb(0, 0, 0);
     font-size: clamp(14px, 2.2vw, 24px);
 }
-
-/* Bloque de galería de productos */
+/* estilos del tercer bloque */
 .three_block {
     aspect-ratio: 10/ 3;
     margin-top: 50px;
@@ -160,7 +152,6 @@ header {
     margin-right: auto;
 }
 
-/* Título de la sección de productos */
 .menu-title {
     grid-column: 1 / -1;
     text-align: center;
@@ -170,7 +161,6 @@ header {
     font-weight: bold;
 }
 
-/* Tarjeta individual de producto */
 .card {
     color: rgb(0, 0, 0);
     border: none;
@@ -183,7 +173,6 @@ header {
     box-shadow: 0 2px 4px rgb(156, 214, 216);
 }
 
-/* Imagen del producto */
 .card img {
     width: 100px;
     height: 100px;
@@ -191,7 +180,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* Botón de compra dentro de la tarjeta */
 .card button {
     margin-top: 10px;
     padding: 8px 12px;
@@ -200,7 +188,7 @@ header {
     cursor: pointer;
 }
 
-/* Bloque con reglas del juego */
+/* estilos del cuarto bloque */
 .four_block {
     background-color: #fffefe;
     background-image: url("../assets/images/bg-grid.png");
@@ -255,13 +243,13 @@ header {
 
 /* Imagen de reglas */
 .rules_img .img_rule {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
+/* estilos del pie de página */
 .row_footer {
     display: flex;
     justify-content: center;
@@ -329,7 +317,6 @@ header {
     
     .three_block {
         aspect-ratio: auto;
-        min-height: auto;
         padding: 20px 10px;
     }
     

@@ -1,5 +1,5 @@
 // ===== FUNCIONES REUTILIZABLES =====
-function botonesAnimacion (selector, pressColor, releaseColor, scale = 0.95) {
+function setupButtonEffects(selector, pressColor, releaseColor, scale = 0.95) {
   const buttons = document.querySelectorAll(selector);
   
   buttons.forEach(button => {
@@ -72,5 +72,5 @@ buyButtons.forEach(button => {
   });
 });
 
-// ===== BOTÓN PRINCIPAL DE SELECCIÓN  =====
+// ===== BOTÓN PRINCIPAL DE SELECCIÓN (HERO) =====
 setupButtonEffects('.seletion', '#a8c5c2', '#d6f8f4');
