@@ -1,9 +1,10 @@
-
 /* Reset universal: elimina márgenes y padding por defecto de todos los elementos */
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -71,10 +72,10 @@ header {
 
 /* estilos del primer bloque*/
 .one_block {
-    margin-top: 50px;
-    aspect-ratio: 14 / 8;
+    aspect-ratio: 16 / 10;
     background-image: url("../assets/images/background.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     border: none;
     padding: 10px;
@@ -131,6 +132,7 @@ header {
     color: rgb(0, 0, 0);
     font-size: clamp(14px, 2.2vw, 24px);
 }
+
 /* estilos del tercer bloque */
 .three_block {
     aspect-ratio: 10/ 3;
@@ -193,12 +195,14 @@ header {
 .four_block {
     background-color: #fffefe;
     background-image: url("../assets/images/bg-grid.png");
-    background-size: cover;
+    background-size: contain;
+    aspect-ratio: 16 / 10;
+    background-repeat: no-repeat;
     background-position: center;
-    color: rgb(0, 0, 0);
     border: none;
     padding: 10px;
     width: 100%;
+
 }
 
 /* Contenedor flex principal */
@@ -214,12 +218,11 @@ header {
 
 /* Contenedor de texto */
 .card_rules {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
     font-size: clamp(14px, 2.2vw, 24px);
     color: rgb(0, 0, 0);
+    line-height: 1.6;
     flex: 1;
+    order: 1;
 }
 
 /* Título de reglas */
@@ -240,6 +243,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    order: 2;
 }
 
 /* Imagen de reglas */
@@ -249,7 +253,9 @@ header {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
 }
+
 /* estilos del pie de página */
 .row_footer {
     display: flex;
@@ -284,43 +290,77 @@ header {
 @media (max-width: 768px) {
     .rules_container {
         flex-direction: column;
-        gap: 20px;
         padding: 15px;
+        gap: 20px;
+    }
+
+    .card_rules {
+        order: 1;
+        width: 100%;
+    }
+
+    .card_rules h1 {
+        order: 1;
+    }
+
+    .card_rules p {
+        order: 3;
+    }
+
+    .rules_img {
+        order: 2;
+        width: 100%;
     }
 
     .rules_img .img_rule {
-        width: 150px;
+        width: 250px;
         height: 150px;
     }
-    
+
     .menu {
         grid-template-columns: 1fr;
         gap: 15px;
         padding: 0 10px;
     }
-    
+
     .row_text {
         margin-right: 20px;
         margin-left: 20px;
     }
-    
+
     .options_buttons {
         justify-content: center;
         margin-right: 0;
         gap: 10px;
     }
-    
+
     .row_content {
         gap: 30px;
         margin-top: 60px;
         padding: 0 15px;
     }
-    
+    .one_block {
+        padding: 20px 10px;
+        margin-top: 20px;
+        aspect-ratio: 16/9;
+    }
     .three_block {
-        aspect-ratio: auto;
+        aspect-ratio: 16/9;
         padding: 20px 10px;
     }
-    
+
+    .four_block {
+        padding: 10px 10px;
+        aspect-ratio: 4/3;
+        background-size: 120%;
+
+    }
+    .rules_container {
+        margin: 2px auto;
+        padding: 10px;
+    }
+
+
     body {
         margin-top: 240px;
     }
@@ -331,22 +371,23 @@ header {
     .container {
         padding: 0 10px;
     }
-    
+
     .row_footer {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-    
+
     .row_footer hr {
         display: none;
     }
-    
+
     .card img {
         width: 80px;
         height: 80px;
     }
-    body{
+
+    body {
         margin-top: 100px;
     }
 }
