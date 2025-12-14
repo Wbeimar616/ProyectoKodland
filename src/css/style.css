@@ -1,19 +1,26 @@
 /* Estilos CSS */
 
 /* Reset universal: elimina márgenes y padding por defecto de todos los elementos */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Contenedor centrado: ancho responsivo con máximo de 1200px, centrado horizontalmente */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* Body: estilos generales del cuerpo de la página, fuente, color de fondo, espaciado superior para header fijo */
+/* Body: estilos generales del cuerpo de la página */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 100px;
@@ -29,11 +36,12 @@ header {
     text-align: center;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     box-shadow: 0 2px 4px rgb(167, 124, 67);
     z-index: 1000;
 }
-
 
 /* Encabezado del sitio: logo/título con espaciado y alineación */
 .row_header {
@@ -50,9 +58,10 @@ header {
     justify-content: flex-end;
     gap: 15px;
     margin-right: 20px;
+    flex-wrap: wrap;
 }
 
-/* Estilos base para cada botón de opción del header: sin bordes, color base */
+/* Estilos base para cada botón de opción del header */
 .options {
     font-size: clamp(13px, 2vw, 15px);
     background-color: #fcc57e;
@@ -71,9 +80,10 @@ header {
     background-position: center;
     border: none;
     padding: 10px;
+    width: 100%;
 }
 
-/* Contenedor del título principal en bloque principal: flexbox con espaciado y fuente grande */
+/* Contenedor del título principal en bloque principal */
 .row_content {
     display: flex;
     gap: 120px;
@@ -81,20 +91,22 @@ header {
     margin-top: 120px;
     font-weight: bold;
     color: rgb(255, 255, 255);
+    flex-wrap: wrap;
 }
 
-/* Texto descriptivo en bloque principal: flexbox con fuente responsiva */
+/* Texto descriptivo en bloque principal */
 .row_text {
     display: flex;
     gap: 12px;
     font-size: clamp(14px, 2.2vw, 24px);
     margin-top: 20px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 150px;
     color: rgb(253, 253, 253);
+    flex-wrap: wrap;
 }
 
-/* Botón de acción principal (COMPRAR): con color distintivo y cursor pointer */
+/* Botón de acción principal (COMPRAR) */
 .seletion {
     background-color: #d6f8f4;
     color: rgb(0, 0, 0);
@@ -108,19 +120,17 @@ header {
     cursor: pointer;
 }
 
-/* Bloque informativo: sección con fondo claro para descripción de producto */
+/* Bloque informativo */
 .two_block {
     background-color: #fffefe;
     color: rgb(0, 0, 0);
     border: none;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    box-sizing: border-box;
 }
 
-/* Título y descripción de sección: centrado con fuente responsiva */
+/* Título y descripción de sección */
 .row_Title {
-    font-size: 50px;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -128,30 +138,29 @@ header {
     font-size: clamp(14px, 2.2vw, 24px);
 }
 
-/* Bloque de galería de productos: proporciones 10/3 con color de fondo distintivo */
+/* Bloque de galería de productos */
 .three_block {
+    aspect-ratio: 10/ 3;
     margin-top: 50px;
     background-color: #d6f8f4;
     color: rgb(0, 0, 0);
     border: none;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    box-sizing: border-box;
 }
 
-/* Grid de 3 columnas para mostrar las tarjetas de productos lado a lado, responsivo */
+/* Grid de 3 columnas para mostrar las tarjetas de productos */
 .menu {
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Título de la sección de productos: ocupa toda la fila superior del grid */
+/* Título de la sección de productos */
 .menu-title {
     grid-column: 1 / -1;
     text-align: center;
@@ -161,7 +170,7 @@ header {
     font-weight: bold;
 }
 
-/* Tarjeta individual de producto: flexbox columna con imagen, texto y botón */
+/* Tarjeta individual de producto */
 .card {
     color: rgb(0, 0, 0);
     border: none;
@@ -174,7 +183,7 @@ header {
     box-shadow: 0 2px 4px rgb(156, 214, 216);
 }
 
-/* Imagen del producto: tamaño fijo, contenida sin deformarse */
+/* Imagen del producto */
 .card img {
     width: 100px;
     height: 100px;
@@ -182,7 +191,7 @@ header {
     margin-bottom: 10px;
 }
 
-/* Botón de compra dentro de la tarjeta: con color y espaciado */
+/* Botón de compra dentro de la tarjeta */
 .card button {
     margin-top: 10px;
     padding: 8px 12px;
@@ -191,8 +200,7 @@ header {
     cursor: pointer;
 }
 
-
-/* Bloque con reglas del juego: fondo con patrón y estilos */
+/* Bloque con reglas del juego */
 .four_block {
     background-color: #fffefe;
     background-image: url("../assets/images/bg-grid.png");
@@ -200,43 +208,44 @@ header {
     background-position: center;
     color: rgb(0, 0, 0);
     border: none;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    box-sizing: border-box;
 }
 
-/* Contenedor flex principal: organiza texto  */
+/* Contenedor flex principal */
 .rules_container {
     display: flex;
     gap: 30px;
     align-items: center;
-    margin: 0px auto;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 20px;
 }
 
-/* Contenedor de texto: flexbox columna para apilar h1 y p verticalmente */
+/* Contenedor de texto */
 .card_rules {
     display: flex;
     flex-direction: column;
     gap: 12px;
     font-size: clamp(14px, 2.2vw, 24px);
     color: rgb(0, 0, 0);
-    /* flex: 1; */
+    flex: 1;
 }
 
-/* Título de reglas: fuente responsiva sin margen */
+/* Título de reglas */
 .card_rules h1 {
     font-size: clamp(24px, 3vw, 36px);
     margin: 0;
 }
 
-/* Párrafo de reglas: sin margen con altura de línea aumentada para legibilidad */
+/* Párrafo de reglas */
 .card_rules p {
     margin: 0;
     line-height: 1.6;
 }
 
-/* Contenedor de imagen: flexbox para centrarla */
+/* Contenedor de imagen */
 .rules_img {
     flex: 0 0 auto;
     display: flex;
@@ -244,48 +253,13 @@ header {
     justify-content: center;
 }
 
-/* Imagen de reglas: tamaño cuadrado con bordes redondeados y sombra */
+/* Imagen de reglas */
 .rules_img .img_rule {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Media query: en pantallas pequeñas (<768px), apila texto e imagen verticalmente */
-@media (max-width: 768px) {
-    .rules_container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .rules_img .img_rule {
-        width: 150px;
-        height: 150px;
-    }
-
-    /* Ajustar grid de productos a 2 columnas en tablets */
-    .menu {
-        grid-template-columns: repeat(2, 1fr);
-        width: 95%;
-    }
-}
-
-/* Media query: en pantallas muy pequeñas (<600px), grid de 1 columna */
-@media (max-width: 600px) {
-    .menu {
-        grid-template-columns: 1fr;
-        width: 95%;
-    }
-
-    .row_content {
-        gap: 20px;
-    }
-
-    .one_block {
-        padding: 10px;
-    }
 }
 
 .row_footer {
@@ -296,7 +270,8 @@ header {
     background-color: #bebebe;
     color: rgb(0, 0, 0);
     box-shadow: 0 -2px 4px rgb(255, 255, 255);
-
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .row_footer button {
@@ -314,4 +289,73 @@ header {
     background-color: rgb(252, 251, 251);
     border: none;
     margin: 0 5px;
+}
+
+/* Media query: en pantallas pequeñas (<768px) */
+@media (max-width: 768px) {
+    .rules_container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .rules_img .img_rule {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .menu {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .row_text {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    .options_buttons {
+        justify-content: center;
+        margin-right: 0;
+        gap: 10px;
+    }
+    
+    .row_content {
+        gap: 30px;
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+    
+    .three_block {
+        aspect-ratio: auto;
+        min-height: auto;
+        padding: 20px 10px;
+    }
+    
+    body {
+        margin-top: 80px;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .row_footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .row_footer hr {
+        display: none;
+    }
+    
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
 }
