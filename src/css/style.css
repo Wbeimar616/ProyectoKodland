@@ -71,7 +71,8 @@ header {
 
 /* estilos del primer bloque*/
 .one_block {
-    aspect-ratio: 14 / 9;
+    margin-top: 50px;
+    aspect-ratio: 14 / 8;
     background-image: url("../assets/images/background.png");
     background-size: cover;
     background-position: center;
@@ -279,7 +280,7 @@ header {
     margin: 0 5px;
 }
 
-/* Media query: en pantallas pequeñas (<768px) */
+/* Media query: en pantallas de celular */
 @media (max-width: 768px) {
     .rules_container {
         flex-direction: column;
@@ -321,7 +322,7 @@ header {
     }
     
     body {
-        margin-top: 80px;
+        margin-top: 240px;
     }
 }
 
@@ -344,5 +345,8 @@ header {
     .card img {
         width: 80px;
         height: 80px;
+    }
+    body{
+        margin-top: 100px;
     }
 }
